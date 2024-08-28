@@ -11,41 +11,99 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
-    <nav class="navbar backdrop-blur-md bg-white/20 py-5 px-7 w-full fixed">
+    <nav class="navbar backdrop-blur-md bg-white/20 py-4 px-7 w-full fixed">
       <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
           <img src="./img/idn hsi.png" alt="" class="h-12 w-full" />
         </div>
 
         <div class="hidden md:flex items-center gap-16">
-        <a href="#" class="text-[#2c1810] font-bold text-lg hover:text-bluebg-blue-200">Home</a>
-        <a href="#" class="text-[#2c1810] font-bold text-lg hover:text-bluebg-blue-200">About</a>
-        <a href="#" class="text-[#2c1810] font-bold text-lg hover:text-bluebg-blue-200">Gallery</a>
-        <a href="#" class="text-[#2c1810] font-bold text-lg hover:text-bluebg-blue-200">Contact</a>
-        </div>
+          
+        <a href="#" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">Home</a>
+        <a href="#about" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">About</a>
+        <a href="#gallery" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">Gallery</a>
+        <a href="#footer" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">Contact</a>
+        <div class="ml-80">
         <a
             href="#"
-            class="bg-blue-500 font-bold text-white p-3 rounded-full hover:bg-blue-300"
+            class="bg-blue-500 font-bold text-white p-3 rounded-full hover:bg-blue-400"
             >Log in</a
           >
+          </div>
+        </div>
+        
+          <div
+          onclick="openNavbar()"
+          class="toggle h-16 flex items-center md:hidden"
+         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 fill-[#02546480] cursor-pointer"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"
+            ></path>
+          </svg>
+        </div>
       </div>
     </nav>
 
-    <section class="px-10 pt-32 hero md:px-32 flex">
-      <div class="container flex flex-col md:flex-row items-center gap-14">
-        <div class="flex flex-col gap-5">
-          <h1
-            class="text-[40px] font-bold text-gray-900 md:text-[64px] leading-[1.1]"
+    <aside
+      class="w-full h-screen bg-white bg-opacity-90 z-50 fixed md:hidden transition-all duration-200 ease-in-out translate-x-full"
+    >
+      <div
+        class="content backdrop-blur h-full flex items-center justify-center relative z-[99]"
+      >
+        <button onclick="closeNavbar()" class="absolute right-5 top-7">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="fill-[#018491] w-6 h-6"
+            viewBox="0 0 256 256"
           >
-            Selamat datang SMA TI HSI-IDN
+            <path
+              d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="flex flex-col gap-8 text-center">
+          <li>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="index.html">Home</a>
+          </li>
+          <li>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="#about">About</a>
+          </li>
+          <li>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="#gallery">Gallery</a>
+            </li>
+          <li>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="#footer">Contact</a>
+          </li>
+          <li>
+          <button onclick="openLogin()"
+                class="text-white text-sm bg-blue-500 rounded-xl hover:bg-blue-400 transition-all duration-200 px-5 py-3 hover:text-white font-bold"
+                href=""
+                >Log in</button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="px-10 pt-32 hero md:px-32 flex">
+      <div class="container flex flex-col md:flex-row items-center gap-9 md:gap-14">
+        <div class="flex flex-col gap-7">
+          <h1
+            class="text-4xl font-bold text-gray-900 md:text-6xl leading-[1.1]"
+          >
+            Selamat datang <span class="text-gray-900 font-bold hover:text-blue-500 cursor-pointer"> SMA TI HSI-IDN </span>
           </h1>
-          <p class="text-lg text-gray-500 max-w-[70%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit.
+          <p class="text-sm md:text-lg text-gray-800">
+            Lembaga pendidikan islam yang fokus melahirkan para programing muda dan mahir dalam bidang agama dan teknologi.
           </p>
           <div>
             <button
-              class="bg-blue-500 text-lg font-bold text-white p-3 rounded-full hover:bg-blue-300"
+              class="bg-blue-500 text-sm md:text-lg font-bold text-white p-3 rounded-full hover:bg-blue-400"
             >
               Register Now!
             </button>
@@ -53,7 +111,7 @@
         </div>
         <div>
         <img
-          src="./img/Myshcool.png"
+          src="./img/logo-idn2.png"
           alt="Right Image"
           width="750"
           height="750"
@@ -62,37 +120,36 @@
         </div>
       </div>
     </section>
-    <section class="flex flex-col md:flex-row items-center mt-40 px-10 md:px-32 mb-16 gap-10 md:gap-24">
+    <section id="about" class="flex flex-col md:flex-row items-center mt-20 md:mt-40 px-10 md:px-32 mb-16 gap-10 md:gap-24">
       <div>
         <img
-          src="./img/about.png"
+          src="./img/logo-hero.png"
           alt="Left Image"
           class="h-80 w-100 object-cover rounded-md shadow-lg"
         />
       </div>
       <div class="flex flex-col gap-5">
-        <h2 class="text-[3.1rem] font-bold mb-3 leading-[1.2] text-gray-800">
-          Program Kita:
+        <h2 class="text-4xl md:text-6xl font-bold mb-3 leading-[1.2] text-gray-800">
+          Program Kami:
         </h2>
         <ul
-          class="list-disc pl-5 flex flex-col gap-3 text-gray-800 font-semibold"
+          class="list-disc pl-5 flex flex-col gap-3 text-gray-700 font-medium"
         >
-          <li class="text-xl">Kelas 10 : Belajar Android Studio</li>
-          <li class="text-xl">Kelas 11 : Belajar UI/UX Design, Canva dan Figma</li>
-          <li class="text-xl">Kelas 12 : Belajar Bahasa Pemrograman, HTML, CSS, JS, PHP, Laravel</li>
+          <li class="text-lg md:text-xl">Kelas 10 : Belajar Android Studio</li>
+          <li class="text-lg md:text-xl">Kelas 11 : Belajar UI/UX Design, Canva dan Figma</li>
+          <li class="text-lg md:text-xl">Kelas 12 : Belajar Bahasa Pemrograman, HTML, CSS, JS, PHP, Laravel</li>
         </ul>
       </div>
     </section>
-    <section class="flex flex-col md:flex-row items-center mt-40 px-10 md:px-32 mb-16 gap-10 md:gap-24">
-      
+    <section class="flex flex-col md:flex-row items-center mt-28 md:mt-40 px-10 md:px-32 mb-16 gap-10 md:gap-24">
       <div class="flex flex-col gap-5">
-        <h2 class="text-[3.1rem] font-bold mb-3 leading-[1.2] text-gray-800">
+        <h2 class="text-4xl md:text-6xl font-bold mb-3 leading-[1.1] text-gray-800">
           Jagoan IT Pinter NGAJI
         </h2>
         <div
-          class="list-disc pl-5 flex flex-col gap-3 text-gray-800 font-semibold"
+          class="flex flex-col gap-3 text-gray-800 font-medium"
         >
-          <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, atque.</p>
+          <p class="text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, atque.</p>
         </div>
       </div>
       <div>
@@ -103,9 +160,9 @@
         />
       </div>
     </section>
-    <section class="flex flex-col md:flex-row items-center my-40 px-10 md:px-32 mb-16 gap-10 md:gap-24">
+    <section id="gallery" class="flex flex-col md:flex-row items-center my-28 md:mt-40 px-10 md:px-32 mb-16 gap-10 md:gap-24">
       <div>
-        <h1 class="text-center font-bold text-5xl mb-16">The Gallery</h1>
+        <h1 class="text-center font-bold text-4xl md:text-6xl mb-16">The Gallery</h1>
         <div
             class="grid grid-cols-1 sm:grid-cols-3 gap-3" 
         >
@@ -156,7 +213,7 @@
       </div>
     </section>
 
-    <footer class="px-24 bg-blue-200 flex flex-col gap-12 pt-12">
+    <footer id="footer" class="px-24 bg-blue-500 flex flex-col gap-12 pt-12">
       <div class="flex flex-col md:flex-row items-center justify-around px-24 gap-28">
         <div>
           <img src="./img/idn hsi.png" alt="Logo" class="h-12 w-full" />
@@ -164,57 +221,61 @@
 
         <div class="flex gap-24">
           <div class="flex flex-col gap-3">
-            <h4 class="text-xl font-bold">Follow us</h4>
+            <h4 class="text-xl font-bold text-white">Follow us</h4>
             <div class="flex items-center gap-4">
-              <img
-                src="./img/ig.png"
+              <a href="https://www.instagram.com/alwnabdillah/" target="_blank"><img
+                src="./img/instagram-icon.png"
                 alt="Icon 1"
                 class="h-8 w-8 object-cover"
-              />
-              <img
-                src="./img/facebook.png"
+              /></a>
+              <a href="https://github.com/Alwanabdillah" target="_blank"><img
+                src="./img/github-icon.png"
                 alt="Icon 1"
                 class="h-8 w-8 object-cover"
-              />
-              <img
-                src="./img/linkedin.png"
+              /></a>
+              <a href="https://www.linkedin.com/in/alwan-abdillah-208315274/" target="_blank"><img
+                src="./img/linkedin-icon.png"
                 alt="Icon 1"
                 class="h-8 w-8 object-cover"
-              />
+              /></a>
           </div>
         </div>
         <div class="flex flex-col gap-3">
-            <h4 class="text-xl font-bold">Useful Links</h4>
+            <h4 class="text-xl font-bold text-white">Useful Links</h4>
             <ul class="flex flex-col text-decoration-none gap-2 text-gray-700">
-              <li><a href="#">Our Projects</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Updates</a></li>
+              <li><a href="#" class="text-white">Our Projects</a></li>
+              <li><a href="#" class="text-white">FAQs</a></li>
+              <li><a href="#" class="text-white">Updates</a></li>
             </ul>
           </div>
       </div>
       <div class="flex flex-col gap-3">
-            <h4 class="text-xl font-bold">Contacts</h4>
+            <h4 class="text-xl font-bold text-white">Contacts</h4>
             <ul class="flex flex-col text-decoration-none gap-2 text-gray-700">
-              <li><a href="/">Address: Baledono, Purworejo</a></li>
-              <li><a href="/">Email: abdillahalwan67@gmail.com</a></li>
-              <li><a href="/">Phone Number: +62 81389571258</a></li>
+              <li><a href="/" class="text-white">Address: Baledono, Purworejo</a></li>
+              <li><a href="/" class="text-white">Email: abdillahalwan67@gmail.com</a></li>
+              <li><a href="/" class="text-white">Phone Number: +62 81389571258</a></li>
             </ul>
           </div>
         </div>
       </div>
           <div class="copyright flex flex-col justify-center items-center p-6 gap-1">
-        <p class="text-[1rem]">&copy; All Copyrights Reserved</p>
-        <p class="font-semibold text-[.7rem] text-center">Developed by <span class="text-red-600 text-[.7rem]">Alwan Abdillah</span></p>
+        <p class="text-[1rem] text-white">&copy; All Copyrights Reserved</p>
+        <p class="font-semibold text-[.7rem] text-center text-white">Developed by <span class="text-blue-200 text-[11px]">Alwan Abdillah</span></p>
       </div>
       
     </footer>
     <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+      const sidebar = document.querySelector("aside");
+
+      function openNavbar() {
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("translate-x-full");
       }
 
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+      function closeNavbar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("translate-x-full");
       }
     </script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
