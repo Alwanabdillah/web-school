@@ -11,26 +11,48 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
-    <nav class="navbar backdrop-blur-md bg-white/20 py-3 px-7 w-full fixed">
+  <body class="text-blue-500 dark:text-white bg-white dark:bg-blue-500">
+    <nav class="navbar backdrop-blur-md bg-white/20 py-4 px-7 w-full fixed">
       <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
           <img src="./img/idn hsi.png" alt="" class="h-12 w-full" />
         </div>
         
-
         <div class="hidden md:flex items-center gap-16">
           
-        <a href="#" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">Home</a>
-        <a href="#about" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">About</a>
-        <a href="#gallery" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">Gallery</a>
-        <a href="#footer" class="text-[#2c1810] font-bold text-lg hover:text-blue-500">Contact</a>
+        <a href="#" class="text-[#2c1810] dark:text-white font-bold text-lg hover:text-blue-500">Home</a>
+        <a href="#about" class="text-[#2c1810] dark:text-white font-bold text-lg hover:text-blue-500">About</a>
+        <a href="#gallery" class="text-[#2c1810] dark:text-white font-bold text-lg hover:text-blue-500">Gallery</a>
+        <a href="#footer" class="text-[#2c1810] dark:text-white font-bold text-lg hover:text-blue-500">Contact</a>
         <div class="ml-80">
-        <a
-            href="#"
-            class="bg-blue-500 font-bold text-white p-3 rounded-full hover:bg-blue-400"
-            >Log in</a
-          >
+          <div class="flex items-center gap-2">
+            <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6">
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+            <button class="w-10 h-5 p-0.5 rounded-full bg-blue-500 dark:bg-white">
+              <div class="w-4 h-4 transition-all bg-white rounded-full dark:bg-blue-500 dark:translate-x-5"></div>
+            </button>
+            <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6">
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+            </svg>
           </div>
         </div>
         <div
@@ -70,22 +92,18 @@
 
         <ul class="flex flex-col gap-8 text-center">
           <li>
-            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="index.html">Home</a>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810]  dark:text-white font-semibold hover:text-blue-500" href="index.html">Home</a>
           </li>
           <li>
-            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="#about">About</a>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810]  dark:text-white font-semibold hover:text-blue-500" href="#about">About</a>
           </li>
           <li>
-            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="#gallery">Gallery</a>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810] dark:text-white font-semibold hover:text-blue-500" href="#gallery">Gallery</a>
             </li>
           <li>
-            <a onclick="closeNavbar()" class="text-base text-[#2c1810] font-semibold hover:text-blue-500" href="#footer">Contact</a>
+            <a onclick="closeNavbar()" class="text-base text-[#2c1810] dark:text-white font-semibold hover:text-blue-500" href="#footer">Contact</a>
           </li>
           <li>
-          <button onclick="openLogin()"
-                class="text-white text-sm bg-blue-500 rounded-xl hover:bg-blue-400 transition-all duration-200 px-5 py-3 hover:text-white font-bold"
-                href=""
-                >Log in</button>
           </li>
           
         </ul>
@@ -96,11 +114,11 @@
       <div class="container flex flex-col md:flex-row items-center gap-9 md:gap-14">
         <div class="flex flex-col gap-7">
           <h1
-            class="text-4xl font-bold text-gray-900 md:text-6xl leading-[1.1]"
+            class="text-4xl font-bold text-gray-900 dark:text-white md:text-6xl leading-[1.1]"
           >
-            Selamat datang <span class="text-gray-900 font-bold hover:text-blue-500 cursor-pointer"> SMA TI HSI-IDN </span>
+            Selamat datang <span class="text-gray-900 dark:text-white font-bold hover:text-blue-500 cursor-pointer"> SMA TI HSI-IDN </span>
           </h1>
-          <p class="text-sm md:text-lg text-gray-800">
+          <p class="text-sm md:text-lg text-gray-800  dark:text-white">
             Lembaga pendidikan islam yang fokus melahirkan para programing muda dan mahir dalam bidang agama dan teknologi.
           </p>
           <div>
@@ -131,11 +149,11 @@
         />
       </div>
       <div class="flex flex-col gap-5">
-        <h2 class="text-4xl md:text-6xl font-bold mb-3 leading-[1.2] text-gray-800">
+        <h2 class="text-4xl md:text-6xl font-bold mb-3 leading-[1.2] text-gray-800  dark:text-white">
           Program Kami:
         </h2>
         <ul
-          class="list-disc pl-5 flex flex-col gap-3 text-gray-700 font-medium"
+          class="list-disc pl-5 flex flex-col gap-3 text-gray-700  dark:text-white font-medium"
         >
           <li class="text-lg md:text-xl">Kelas 10 : Belajar Android Studio</li>
           <li class="text-lg md:text-xl">Kelas 11 : Belajar UI/UX Design, Canva dan Figma</li>
@@ -147,39 +165,39 @@
 <section id="about" class="flex flex-col items-center mt-20 md:mt-36 px-10 md:px-32 mb-16 gap-5 md:gap-5">
   <h1 class="text-center font-bold text-4xl md:text-6xl mb-16">The Eskul</h1>
   <div class="flex flex-col md:flex-row gap-5">
-<div class="max-w-sm bg-blur-md border border-gray-200 rounded-lg shadow-md">
+<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md">
     <a href="#">
         <img class="rounded-t-lg" src="./img/eskul1.png" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Futsal</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900  dark:text-white">Futsal</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700">Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-white">Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.</p>
         
     </div>
 </div>
-<div class="max-w-sm bg-blur-md border border-gray-200 rounded-lg shadow-md">
+<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md">
     <a href="#">
         <img class="rounded-t-lg" src="./img/eskul2.png" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Voli</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900  dark:text-white">Voli</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700">Bola voli merupakan permainan beregu yang bertujuan untuk memukul bola ke arah bidang lapangan lawan untuk mendapatkan poin.</p>
+        <p class="mb-3 font-normal text-gray-700  dark:text-white">Bola voli merupakan permainan beregu yang bertujuan untuk memukul bola ke arah bidang lapangan lawan untuk mendapatkan poin.</p>
         
     </div>
 </div>
-<div class="max-w-sm bg-blur-md border border-gray-200 rounded-lg shadow-md">
+<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md">
     <a href="#">
         <img class="rounded-t-lg" src="./img/eskul3.png" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Panahan</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900  dark:text-white">Panahan</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700">Panahan adalah jenis olahraga yang menggunakan busur dan anak panah untuk menembak sasaran.</p>
+        <p class="mb-3 font-normal text-gray-700  dark:text-white">Panahan adalah jenis olahraga yang menggunakan busur dan anak panah untuk menembak sasaran.</p>
         
     </div>
 </div>
@@ -188,11 +206,11 @@
 
     <section class="flex flex-col md:flex-row items-center mt-28 md:mt-36 px-10 md:px-32 mb-16 gap-10 md:gap-24">
       <div class="flex flex-col gap-5">
-        <h2 class="text-4xl md:text-6xl font-bold mb-3 leading-[1.1] text-gray-800">
+        <h2 class="text-4xl md:text-6xl font-bold mb-3 leading-[1.1] text-gray-800  dark:text-white">
           Jagoan IT Pinter NGAJI
         </h2>
         <div
-          class="flex flex-col gap-3 text-gray-800 font-medium"
+          class="flex flex-col gap-3 text-gray-800  dark:text-white font-medium"
         >
           <p class="text-lg md:text-xl">Kalau yang lain bisa, kamu harus lebih dari bisa.</p>
         </div>
@@ -258,7 +276,7 @@
       </div>
     </section>
 
-    <footer id="footer" class="px-24 bg-blue-500 flex flex-col gap-12 pt-12">
+    <footer id="footer" class="px-24 bg-blue-500 dark:bg-blue-700 flex flex-col gap-12 pt-12">
       <div class="flex flex-col md:flex-row items-center justify-around px-24 gap-28">
         <div>
           <img src="./img/idn hsi.png" alt="Logo" class="h-12 w-full" />
@@ -287,7 +305,7 @@
         </div>
         <div class="flex flex-col gap-3">
             <h4 class="text-xl font-bold text-white">Useful Links</h4>
-            <ul class="flex flex-col text-decoration-none gap-2 text-gray-700">
+            <ul class="flex flex-col text-decoration-none gap-2 text-gray-700  dark:text-white">
               <li><a href="#" class="text-white">Our Projects</a></li>
               <li><a href="#" class="text-white">FAQs</a></li>
               <li><a href="#" class="text-white">Updates</a></li>
@@ -296,7 +314,7 @@
       </div>
       <div class="flex flex-col gap-3">
             <h4 class="text-xl font-bold text-white">Contacts</h4>
-            <ul class="flex flex-col text-decoration-none gap-2 text-gray-700">
+            <ul class="flex flex-col text-decoration-none gap-2 text-gray-700  dark:text-white">
               <li><a href="/" class="text-white">Address: Baledono, Purworejo</a></li>
               <li><a href="/" class="text-white">Email: abdillahalwan67@gmail.com</a></li>
               <li><a href="/" class="text-white">Phone Number: +62 81389571258</a></li>
@@ -322,10 +340,24 @@
         sidebar.classList.remove("translate-x-0");
         sidebar.classList.add("translate-x-full");
       }
+
+      function toggleDarktheme() {
+        if ( localStorage.getItem ('theme') === "dark") {
+          localStorage.setItem ("theme", "light");
+          document.documentElement.classList.remove("dark");
+        } else {
+          localStorage.setItem("theme", "dark");
+          document.documentElement.classList.add("dark");
+        }
+      }
+
+      document
+      .querySelector("button")
+      .addEventListener("click", toggleDarktheme);
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
     </script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
   </body>
 </html>
