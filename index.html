@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body class="text-blue-500 dark:text-white bg-white dark:bg-blue-500">
+  <body class="text-blue-500 dark:text-white bg-white dark:bg-blue-600">
     <nav class="navbar backdrop-blur-md bg-white/20 py-4 px-7 w-full fixed">
       <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
-          <img src="./img/idn hsi.png" alt="" class="h-12 w-full" />
+          <img src="./img/idn hsi.png" alt="" class="h-full w-full" />
         </div>
         
         <div class="hidden md:flex items-center gap-16">
@@ -55,25 +55,26 @@
             </svg>
           </div>
         </div>
-        <div
-          onclick="openNavbar()"
-          class="toggle h-16 flex items-center md:hidden"
+      </div>
+      <div
+        onclick="openNavbar()"
+        class="toggle h-16 flex items-center md:hidden"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 fill-[#02546480] cursor-pointer"
+          viewBox="0 0 256 256"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 fill-[#02546480] cursor-pointer"
-            viewBox="0 0 256 256"
-          >
-            <path
-              d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"
-            ></path>
-          </svg>
-        </div>
+          <path
+            class="fill-[#025480]"
+            d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"
+          ></path>
+        </svg>
       </div>
     </nav>
 
     <aside
-      class="w-full h-screen bg-blur-lg bg-white bg-opacity-90 z-50 fixed md:hidden transition-all duration-200 ease-in-out translate-x-full"
+      class="w-[400px] h-[300px] bg-blur-lg bg-white bg-opacity-90 z-50 fixed transition-all duration-200 ease-in-out translate-x-full md:hidden"
     >
       <div
         class="content backdrop-blur h-full flex items-center justify-center relative z-[99]"
@@ -90,7 +91,7 @@
           </svg>
         </button>
 
-        <ul class="flex flex-col gap-8 text-center">
+        <ul class="flex flex-col gap-8 text-right">
           <li>
             <a onclick="closeNavbar()" class="text-base text-[#2c1810]  dark:text-white font-semibold hover:text-blue-500" href="index.html">Home</a>
           </li>
@@ -116,16 +117,15 @@
           <h1
             class="text-4xl font-bold text-gray-900 dark:text-white md:text-6xl leading-[1.1]"
           >
-            Selamat datang <span class="text-gray-900 dark:text-white font-bold hover:text-blue-500 cursor-pointer"> SMA TI HSI-IDN </span>
+            Selamat datang <span class="text-gray-900 dark:text-white font-bold hover:text-blue-500 cursor-pointer dark:hover:text-blue-200"> SMA TI HSI-IDN </span>
           </h1>
           <p class="text-sm md:text-lg text-gray-800  dark:text-white">
             Lembaga pendidikan islam yang fokus melahirkan para programing muda dan mahir dalam bidang agama dan teknologi.
           </p>
           <div>
             <button
-              class="bg-blue-500 text-sm md:text-lg font-bold text-white p-3 rounded-full hover:bg-blue-400"
-            >
-              Register Now!
+              class="bg-blue-500 dark:bg-white text-sm md:text-lg font-bold text-white dark:text-blue-500 hover:dark:text-white p-3 rounded-full hover:bg-blue-400 hover:dark:bg-blue-500"
+            ><a href="regiter.html">Register Now!</a>
             </button>
           </div>
         </div>
@@ -135,7 +135,7 @@
           alt="Right Image"
           width="750"
           height="750"
-          class="object-cover rounded-md shadow-lg"
+          class="object-cover rounded-md shadow-lg hover:scale-110 duration-300"
         />
         </div>
       </div>
@@ -145,7 +145,7 @@
         <img
           src="./img/logo-hero.png"
           alt="Left Image"
-          class="h-80 w-100 object-cover rounded-md shadow-lg"
+          class="h-80 w-100 object-cover rounded-md shadow-lg hover:scale-110 duration-300"
         />
       </div>
       <div class="flex flex-col gap-5">
@@ -165,9 +165,9 @@
 <section id="about" class="flex flex-col items-center mt-20 md:mt-36 px-10 md:px-32 mb-16 gap-5 md:gap-5">
   <h1 class="text-center font-bold text-4xl md:text-6xl mb-16">The Eskul</h1>
   <div class="flex flex-col md:flex-row gap-5">
-<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md">
+<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md hover:scale-110 duration-300">
     <a href="#">
-        <img class="rounded-t-lg" src="./img/eskul1.png" alt="" />
+        <img class="rounded-t-lg " src="./img/eskul1.png" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
@@ -177,9 +177,9 @@
         
     </div>
 </div>
-<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md">
+<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md hover:scale-110 duration-300">
     <a href="#">
-        <img class="rounded-t-lg" src="./img/eskul2.png" alt="" />
+        <img class="rounded-t-lg " src="./img/eskul2.png" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
@@ -189,9 +189,9 @@
         
     </div>
 </div>
-<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md">
+<div class="max-w-sm bg-blur-md border border-gray-200 dark:border-blue-400 rounded-lg shadow-md hover:scale-110 duration-300">
     <a href="#">
-        <img class="rounded-t-lg" src="./img/eskul3.png" alt="" />
+        <img class="rounded-t-lg " src="./img/eskul3.png" alt="" />
     </a>
     <div class="p-5">
         <a href="#">
@@ -234,21 +234,21 @@
           alt=""
           width="500"
           height="500"
-          class="object-cover rounded-md shadow-2xl"
+          class="object-cover rounded-md shadow-2xl hover:scale-110 duration-300"
         />
             <img
           src="./img/gallery3.png"
           alt=""
           width="500"
           height="500"
-          class="object-cover rounded-md shadow-2xl"
+          class="object-cover rounded-md shadow-2xl hover:scale-110 duration-300"
         />
             <img
           src="./img/gallery2.png"
           alt=""
           width="500"
           height="500"
-          class="object-cover rounded-md shadow-2xl"
+          class="object-cover rounded-md shadow-2xl hover:scale-110 duration-300"
         />
         
             <img
@@ -256,21 +256,21 @@
           alt=""
           width="500"
           height="500"
-          class="object-cover rounded-md shadow-2xl"
+          class="object-cover rounded-md shadow-2xl hover:scale-110 duration-300"
         />
             <img
           src="./img/gallery4.png"
           alt=""
           width="500"
           height="500"
-          class="object-cover rounded-md shadow-2xl"
+          class="object-cover rounded-md shadow-2xl hover:scale-110 duration-300"
         />
         <img
           src="./img/gallery6.png"
           alt=""
           width="500"
           height="500"
-          class="object-cover rounded-md shadow-2xl"
+          class="object-cover rounded-md shadow-2xl hover:scale-110 duration-300"
         />
         </div>
       </div>
